@@ -24,14 +24,12 @@ if (empty($result) || $response === false ) {
         overflow: auto;
         display: block;
     }
-    tr:even-child{
-
-    }
 </style>
 </head>
 <body>
-    <h1>University of Bahrain - Students Enrollment by Nationality</h1>
-    <table>
+    <h1 class="text-center fw-bold mt-4 mb-4">UOB - Students Enrollment by Nationality</h1>
+    
+    <table class="table table-striped table-hover">
         <thead>
             <tr>
                 <th>Year</th>
