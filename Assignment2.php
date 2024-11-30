@@ -31,7 +31,7 @@ if (empty($result) || $response === false ) {
             justify-content: flex-start;
             align-items: center;
             margin: 0;
-            background-color: #f8f9fa;
+            background-color: #f8f9fb;
             padding:20px;
         }
         .container {
