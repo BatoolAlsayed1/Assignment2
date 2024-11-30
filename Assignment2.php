@@ -1,5 +1,4 @@
 <?php
-
 $URL = 'https://data.gov.bh/api/explore/v2.1/catalog/datasets/01-statistics-of-students-nationalities_updated/records?where=colleges%20like%20%22IT%22%20AND%20the_programs%20like%20%22bachelor%22&limit=100';
 $response= file_get_contents($URL);
 $result= json_decode($response, true);
@@ -11,7 +10,6 @@ if (empty($result) || $response === false ) {
     exit();
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +18,7 @@ if (empty($result) || $response === false ) {
     <title>UOB Students and their Nationality</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        table {
+    table {
             table-layout: auto; 
             width: 100%; 
         }
@@ -35,8 +33,8 @@ if (empty($result) || $response === false ) {
             padding:20px;
         }
         .container {
-            max-width: 90%;
-            padding:15px;
+            max-width: 100%;
+            padding:10px;
             background:#ffffff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             border-radius: 8px;
@@ -48,15 +46,14 @@ if (empty($result) || $response === false ) {
         th, td {
             text-align: center;
             vertical-align: middle;
-            font-size: clamp(3px, 2vw, 16px);
+            font-size: clamp(7px, 2vw, 16px);
         }
-    </style>
+    </style>       
 </head>
 <body>
 <h1>UOB - Students Enrollment by Nationality</h1>
 <div class="container">
     <div class="table-responsive">
-            <div class="table-responsive">
                 <table class="table table-striped table-hover">
                     <thead>
                         <tr>
@@ -83,7 +80,6 @@ if (empty($result) || $response === false ) {
                         ?>
                     </tbody>
                 </table>
-            </div>
     </div>
 </div>  
 </body>
